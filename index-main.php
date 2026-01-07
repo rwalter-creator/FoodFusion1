@@ -8,6 +8,34 @@
     Whether you are a beginner in the kitchen or an experienced home chef, FoodFusion provides the tools, recipes, and community support to help you explore your culinary creativity.
   </p>
 
+
+<!--   <section id="news-feed">
+    <h2>Featured Recipes and Culinary Trends</h2>
+    <ul>
+      <?php
+      // RSS feed URL
+      $rss = simplexml_load_file('https://caribbeanpot.com/feed/');
+      if ($rss === false) {
+        echo "<li>Unable to load news feed.</li>";
+      } else {
+        // Loop through first 5 items
+        $count = 0;
+        foreach ($rss->channel->item as $item) {
+          if ($count >= 5) break;
+          $title = htmlspecialchars($item->title);
+          $link = htmlspecialchars($item->link);
+          $desc = htmlspecialchars(strip_tags($item->description));
+          echo "<li>
+                    <a href='$link' target='_blank          <small>$desc</small>
+                  </li>";
+          $count++;
+        }
+      }
+      ?>
+    </ul>
+  </section> -->
+
+
   <h2>Our Mission</h2>
   <p>
     At FoodFusion, our mission is to encourage healthy, creative, and enjoyable home cooking while building a supportive food community.
@@ -103,6 +131,6 @@
 
     </div>
   </div>
-    
+
   </div>
 </main>

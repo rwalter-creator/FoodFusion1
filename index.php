@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     // Unique email validation
     $row = $userModel->findemail($email);
-    //var_dump($row);
+    //var_dump($row) this is to output on the screen for debugging
     if ($row == NULL) {
       $userModel->create($first_name, $last_name, $password, $email);
       echo "Account created successfully!";

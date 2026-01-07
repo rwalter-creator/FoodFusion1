@@ -11,7 +11,7 @@
     </div>
 
     <p class="footer-text">
-      Last Date update 3rd December 2025. Created by Ryan Walters. All Rights Reserved &copy; 2025.
+      Last Date update 7th January 2026. Created by Ryan Walters. All Rights Reserved &copy; 2026.
     </p>
   </div> 
 		</footer>

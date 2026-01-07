@@ -101,6 +101,7 @@ header {
 
 .social-icons {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -167,7 +168,8 @@ footer {
 
 }
 
-.modal, .modallogin {
+.modal,
+.modallogin {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -348,4 +350,120 @@ footer {
         font-size: 16px;
         padding: 10px;
     }
+}
+
+/* Contact Us Page */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.contact-form input, .contact-form textarea {
+    width: 30%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #d84315;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #bf360c;
+}
+
+.contact-info {
+    margin-top: 30px;
+    background: #fbe9e7;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* About Us Main */
+
+main {
+    padding: 0 40px;
+}
+
+main h1,
+main h2 {
+    color: #d84315;
+}
+
+main p,
+main ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+
+/* news feed */
+
+#news-feed {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#news-feed h2 {
+    color: #d84315;
+    margin-bottom: 10px;
+}
+
+#news-feed ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news-feed li {
+    margin-bottom: 12px;
+}
+
+#news-feed a {
+    color: #d84315;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#news-feed a:hover {
+    text-decoration: underline;
+}
+
+#news-feed small {
+    display: block;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.login-cntainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
