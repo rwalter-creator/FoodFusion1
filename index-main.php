@@ -14,7 +14,7 @@
     <ul>
       <?php
       // RSS feed URL
-      $rss = simplexml_load_file('https://caribbeanpot.com/feed/');
+      /* $rss = simplexml_load_file('https://caribbeanpot.com/feed/');
       if ($rss === false) {
         echo "<li>Unable to load news feed.</li>";
       } else {
@@ -30,7 +30,7 @@
                   </li>";
           $count++;
         }
-      }
+      } */
       ?>
     </ul>
   </section> -->
