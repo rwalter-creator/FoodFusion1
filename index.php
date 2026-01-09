@@ -76,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="Java_Script/main.js"></script>
 <script src="Java_Script/modal.js"></script>
 <script src="Java_Script/slideshow.js"></script>
+<script src="Java_Script/newsfeed.js"></script>
 
 
 </body>

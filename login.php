@@ -17,7 +17,7 @@ if (!isset($_SESSION['lock_time'])) {
 
 if (isset($_POST['LoginBtn'])) {
     // Check if locked
-    if ($_SESSION['attempts'] >= 3) {
+    if ($_SESSION['attempts'] >= 2) {
         if (time() - $_SESSION['lock_time'] < 180) {
             $errormsg = "<strong>Too many failed attempts.</strong> Try again after 3 minutes.";
             exit;

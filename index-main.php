@@ -9,7 +9,7 @@
   </p>
 
 
-<!--   <section id="news-feed">
+  <!--   <section id="news-feed">
     <h2>Featured Recipes and Culinary Trends</h2>
     <ul>
       <?php
@@ -82,6 +82,56 @@
     Discover our latest featured recipes and trending culinary ideas from around the world.
     From traditional comfort foods to modern fusion dishes, our curated content highlights seasonal ingredients, popular food trends, and community favourites.
   </p>
+
+
+
+
+  <!-- Meal of the Day card -->
+  <div id="mealCard" class="card meal-card shadow-sm">
+    <img id="mealImg" src="" class="card-img-top" alt="Meal image">
+    <div class="card-body">
+      <span class="badge text-bg-danger mb-2">Meal of the Day</span>
+      <h5 id="mealTitle" class="card-title">Loading...</h5>
+      <p id="mealPreview" class="card-text">Fetching a delicious recipe...</p>
+      <a href="#" id="viewBtn" class="btn btn-primary">View Recipe</a>
+    </div>
+  </div>
+
+
+  <!-- Details Modal -->
+  <div class="modal fade" id="mealModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle" class="modal-title">Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImg" src="" class="img-fluid rounded mb-3" alt="">
+          <p class="mb-2">
+            <span class="badge text-bg-info me-1" id="modalCategory"></span>
+            <span class="badge text-bg-secondary" id="modalArea"></span>
+          </p>
+          <h6>Ingredients</h6>
+          <ul id="modalIngredients" class="mb-3"></ul>
+          <h6>Instructions</h6>
+          <p id="modalInstructions" class="mb-3"></p>
+          <div id="youtubeWrap" class="ratio ratio-16x9 d-none">
+            <iframe id="modalYoutube" src="" title="Recipe Video" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a id="modalSource" class="btn btn-outline-secondary d-none" target="_blank">Source</a>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  ``
+
 
   <ul>
     <li>Trending international cuisines</li>
