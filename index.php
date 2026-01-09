@@ -1,8 +1,10 @@
 <?php
-require 'app/config/database.php';
-require 'app/models/user.php';
+require 'app/config/config.php';
 
 $userModel = new User($conn);
+
+$message = null;
+$message_type = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $first_name = $_POST['first_name'];
@@ -12,16 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = $_POST['password'];
 
   if (empty($password) || empty($email) || empty($first_name) || empty($last_name)) {
-    echo "All fields required.";
+    $message = "All fields required.";
+    $message_type = "warning";
   } else {
     // Unique email validation
     $row = $userModel->findemail($email);
     //var_dump($row) this is to output on the screen for debugging
     if ($row == NULL) {
       $userModel->create($first_name, $last_name, $password, $email);
-      echo "Account created successfully!";
+      $message = "Account created successfully!";
+      $message_type = "success";
     } else {
-      echo "This Email is already in use.";
+      $message = "This Email is already in use.";
+      $message_type = "error";
     }
 
     // Create user
@@ -48,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 
-<div id="main-container"> <!-- Main Content Section -->
+<div class="main-container"> <!-- Main Content Section -->
 
   <body>
     <?php include 'header.php'; ?>
@@ -73,10 +78,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </button>
 
 </div>
+
+<?php if ($message): ?>
+<div class="toast-container position-fixed top-0 end-0 p-3">
+  <div id="notificationToast" class="toast align-items-center text-white bg-<?php echo $message_type == 'success' ? 'success' : ($message_type == 'error' ? 'danger' : 'warning'); ?> border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <?php echo $message; ?>
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+
 <script src="Java_Script/main.js"></script>
-<script src="Java_Script/modal.js"></script>
 <script src="Java_Script/slideshow.js"></script>
 <script src="Java_Script/newsfeed.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-
-</body>
+<?php if ($message): ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toastEl = document.getElementById('notificationToast');
+  var toast = new bootstrap.Toast(toastEl);
+  toast.show();
+});
+</script>
+<?php endif; ?>

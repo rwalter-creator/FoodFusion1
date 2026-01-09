@@ -12,11 +12,12 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="main-container">
       <?php include 'header.php';?>
       <?php include 'nav.php';?>
       <?php include 'About_Us-main.php';?>
       <?php include 'footer.php';?>
+  </div>
 </body>  
 
 </html>

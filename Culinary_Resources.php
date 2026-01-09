@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="main-container">
       <?php include 'header.php';?>
       <?php include 'nav.php';?>
       <?php include 'Culinary_Resources-main.php';?>

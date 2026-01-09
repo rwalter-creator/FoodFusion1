@@ -1,11 +1,4 @@
-<?php
-$fileName = basename($_SERVER['REQUEST_URI']); 
-if ($fileName != 'login.php') {
-  session_start();
-} else  {
 
-}
-?>
 
 <header> <!-- Header Section -->
   <div id="hlogo"> <!-- Header logo Section -->
