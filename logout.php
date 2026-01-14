@@ -10,5 +10,3 @@ session_destroy();
 // Redirect to homepage or login
 header('Location: index.php'); // change to 'login.php' if you prefer
 exit;
-
-?>

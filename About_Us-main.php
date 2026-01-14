@@ -1,5 +1,5 @@
 
-<main class="about-page">
+<main class="container py-4">
   <section class="hero-section">
     <h1 class="about-title">About FoodFusion</h1>
     <p class="about-intro">

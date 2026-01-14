@@ -10,7 +10,7 @@
   <div id="login"> <!-- login button -->
     <?php
     if (!empty($_SESSION['email']) && $_SESSION['email'] != null) {
-      echo 'Welcome Back ' . $_SESSION['first_name'];
+      echo 'Welcome Back ' . $_SESSION['first_name'] . ' ';
       echo '<a href="' . 'logout.php' . '">Log Out!</a>';
     } else {
 

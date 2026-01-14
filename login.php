@@ -41,6 +41,7 @@ if (isset($_POST['LoginBtn'])) {
             $_SESSION['email'] = $userresult['email'];
             $_SESSION['first_name'] = $userresult['first_name'];
 
+            $_SESSION['id'] = $userresult['id'];
             $_SESSION['attempts'] = 0;
             $_SESSION['lock_time'] = 0;
 
@@ -62,30 +63,7 @@ if (isset($_POST['LoginBtn'])) {
     }
 }
 
-/* $counter = 0;
-session_start();
 
-if (isset($_POST['LoginBtn'])) {    // Check if the login button was clicked (form submitted via POST)    
-    // Process login form submission
-    $login_email = trim($_POST['loginemail']);
-    $login_password = trim($_POST['loginpassword']);
-
-    $userresult = $userModel->findemail($login_email);
-    if ($userresult != null) {
-        $useremail=$userresult['email'];
-        $userpassword=$userresult['password'];
-        if ($useremail==$login_email && password_verify($login_password,$userpassword)) {
-            $_SESSION['email'] = $userresult ['email'];
-            $_SESSION['first_name'] = $userresult ['first_name'];
-
-            header('Location: Educational_Resources.php');
-        } else {
-            echo "Invalid Password!";
-        }
-    } else {
-        echo "User not found!";
-    }
-} */
 ?>
 
 <!-- u:admin@foodfusion.com
@@ -105,54 +83,46 @@ p:foodfusionadmin -->
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
-    <div class="login-cntainer">
+    <div class="main-container">
+        <?php include 'header.php'; ?>
+        <?php include 'nav.php'; ?>
+        <main class="home-page">
+            <section class="hero-section">
+                <h1 class="hero-title">Welcome Back</h1>
+                <p class="hero-description">
+                    Sign in to your FoodFusion account to access your recipes, save favorites, and connect with the community.
+                </p>
+            </section>
 
-        <div class="container">
-            <!-- <form action="#" method="POST">
-                <label for="loginemail">Email</label>
-                <input id="loginemail" name="loginemail" type="email" required><br>
-                <label for="loginpassword">Password</label>
-                <input id="loginpassword" name="loginpassword" type="password" required><br>
-                <button name="LoginBtn" type="submit">Login</button>
-                <a href="#">Forgot password?</a>
-                <a href="#">Don't have an account? Why not register</a>
-            </form> -->
+            <section class="featured-section">
+                <h2 class="section-title">Sign In</h2>
 
-            <?php
-            if (!empty($errormsg)) {
-            ?>
-
-                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-                    <?php echo $errormsg ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            <?php }
-            ?>
-
-
-            <form action="#" method="POST">
-                <div class="row mb-3 mt-3 p-3">
-                    <label for="loginemail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input name="loginemail" type="email" class="form-control" id="loginemail">
+                <?php if (!empty($errormsg)) { ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?php echo $errormsg ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="row mb-3 p-3">
-                    <label for="loginpassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input name="loginpassword" type="password" class="form-control" id="loginpassword">
-                    </div>
-                </div>
-                <div class="row p-3 col-sm-1">
-                    <button name='LoginBtn' type="submit" class="btn btn-primary">Sign in</button>
-                </div>
-            </form>
-        </div>
+                <?php } ?>
 
+                <form action="#" method="POST" class="login-form">
+                    <div class="mb-3">
+                        <label for="loginemail" class="form-label">Email Address</label>
+                        <input name="loginemail" type="email" class="form-control" id="loginemail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginpassword" class="form-label">Password</label>
+                        <input name="loginpassword" type="password" class="form-control" id="loginpassword" required>
+                    </div>
+                    <button name='LoginBtn' type="submit" class="btn btn-primary w-100">Sign In</button>
+                </form>
+
+                <p class="text-center mt-4">
+                    Don't have an account? <a href="index.php" class="text-primary fw-bold">Join FoodFusion today!</a>
+                </p>
+            </section>
+        </main>
+        <?php include 'footer.php'; ?>
     </div>
-    <?php include 'footer.php'; ?>
 </body>
 
 </html>

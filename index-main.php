@@ -9,34 +9,6 @@
     </p>
   </section>
 
-
-  <!--   <section id="news-feed">
-    <h2>Featured Recipes and Culinary Trends</h2>
-    <ul>
-      <?php
-      // RSS feed URL
-      /* $rss = simplexml_load_file('https://caribbeanpot.com/feed/');
-      if ($rss === false) {
-        echo "<li>Unable to load news feed.</li>";
-      } else {
-        // Loop through first 5 items
-        $count = 0;
-        foreach ($rss->channel->item as $item) {
-          if ($count >= 5) break;
-          $title = htmlspecialchars($item->title);
-          $link = htmlspecialchars($item->link);
-          $desc = htmlspecialchars(strip_tags($item->description));
-          echo "<li>
-                    <a href='$link' target='_blank          <small>$desc</small>
-                  </li>";
-          $count++;
-        }
-      } */
-      ?>
-    </ul>
-  </section> -->
-
-
   <section class="mission-section">
     <h2 class="section-title">Our Mission</h2>
     <p>
@@ -52,20 +24,20 @@
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="pics/fresh-vegetable-salad-with-grilled-chicken-breast.jpg" alt="Grilled Chicken Breast">
-        <div class="text">Grilled Chicken Breast</div>
+        <img src="pics/Caribbean_Rum_Food_Festival.jpg" alt="Caribbean Rum and Food Festival">
+        <div class="text">Caribbean Rum and Food Festival</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="pics/hot-spicy-stew-eggplant-sweet-pepper-olives-capers-with-basil-leaves.jpg" alt="Stew eggplant">
-        <div class="text">Stew eggplant</div>
+        <img src="pics/vegetarian_food_festival.jpg" alt="Vegetarian Food Festival">
+        <div class="text">Vegetarian Food Festival</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="pics/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg" alt="Pene Pasta">
-        <div class="text">Penne-pasta</div>
+        <img src="pics/food_beverage_expo.jpg" alt="Food and Beverage Expo">
+        <div class="text">Food and Beverage Expo</div>
       </div>
 
       <!-- Slideshow Buttons Next/Previous -->

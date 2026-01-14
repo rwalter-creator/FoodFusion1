@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__ . '/app/config/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

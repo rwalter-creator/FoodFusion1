@@ -1,3 +1,4 @@
+</body>
 <footer>
   <div class="footer-content">
     <p><strong>Connect with us on Social Media:</strong></p>
